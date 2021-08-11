@@ -1,0 +1,10 @@
+                                
+1] SQL>create table `bike`(Id int not null auto_increment , Name varchar(256) not null , Type int not null auto_increment , Status varcha (256) not null,Company int not null auto_increment , primary key(Id));
+SQL > create table `Company`(Id int not null auto_increment , Name varchar (256) not null ,Origin varchar (256) not null , found int not null auto_increment , Primary key (Id));
+SQL > create table `Country`(Id int not null auto_increment, Name varchar (256) not null , Primary key (Id));
+
+2] SQL > select bike.Id, Bike.Name, country.Name As Country,company.Name AS company, company.found from bike INNER JOIN country USING (ID) INNER JOIN company USING (ID)       ORDER BY ID;
+
+3] SQL > select bike.status, country.Name as country From bike Inner Join country on country.Id=bike.id;
+
+4] SQL > select country.Name as Country , company.name as Company from country Inner join company on company.Id=Country.Id;
